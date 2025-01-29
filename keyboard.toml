@@ -1,36 +1,35 @@
 # Documentation: https://haobogu.github.io/rmk/keyboard_configuration.html
 [keyboard]
-name = "RMK Keyboard"
-product_name = "RMK Keyboard"
+name = "bt60"
+product_name = "bt60"
 vendor_id = 0x4c4b
 product_id = 0x4643
-manufacturer = "haobo"
-chip = "rp2040"
+manufacturer = "polarity works"
+chip = "nrf52840"
 
 [matrix]
 # Input and output pins are mandatory
-input_pins = ["PIN_6", "PIN_7", "PIN_8", "PIN_9"]
-output_pins = ["PIN_19", "PIN_20", "PIN_21"]
+input_pins = ["P0_11", "P0_10", "P0_13", "P0_15", "P0_03", "P0_02", "P0_28", "P0_29", "P0_30", "P0_31", "P0_05", "P0_07", "P0_09", "P0_12", "P0_23"]
+
+output_pins = ["P0_22", "P0_00", "P0_03", "P0_01", "P0_02", "P0_04"]
+
 # WARNING: Currently row2col/col2row is set in RMK's feature gate, configs here do nothing actually
 # row2col = true
 
 [layout]
-rows = 4
-cols = 3
-layers = 2
+rows = 15
+cols = 5
+layers = 1
 keymap = [
     [
-        ["A", "B", "C"],
-        ["Kc1", "Kc2", "Kc3"],
-        ["LCtrl", "MO(1)", "LShift"],
-        ["OSL(1)", "LT(2, Kc9)", "LM(1, LShift | LGui)"]
+        ["ESC", "KC1", "KC2", "KC3", "KC4", "KC5", "KC6", "KC7", "KC8", "KC9", "KC0", "Minus", "Equal", "Backspace", "Delete"],
+        ["Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "LeftBracket", "RightBracket", "Backslash"],
+        ["CapsLock", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Semicolon", "Quote", "Return"],
+        ["LShift", "Z", "X", "C", "V", "B", "N", "M", "Comma", "Dot", "Slash", "RightShift", "ArrowUp"],
+        # Recht neben LShift muss noch eine Taste leer, Links neben ArrowUp muss noch der Layerchange rein
+        ["LCTRL", "LGUI", "LAlt", "Space", "RAlt", "RCTRL", "LEFT", "Down", "Right"]
     ],
-    [
-        ["_", "TT(1)", "TG(2)"],
-        ["_", "_", "_"],
-        ["_", "_", "_"],
-        ["_", "_", "_"]
-    ],
+
 ]
 
 [light]
@@ -48,3 +47,16 @@ keymap = [
 [storage]
 # Storage feature is enabled by default
 # enabled = false
+
+[ble]
+enabled = true
+# vddh has an internal voltage divider
+battery_adc_pin = "vddh"
+# Or
+# battery_adc_pin = "P0_04"
+# adc_divider_measured = 2000
+# adc_divider_total = 2806
+charge_state.pin = "P0_25"
+charge_state.low_active = false
+charge_led.pin = "P0_29"
+charge_led.low_active = false
