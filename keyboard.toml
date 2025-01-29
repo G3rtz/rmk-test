@@ -25,8 +25,7 @@ keymap = [
         ["ESC", "KC1", "KC2", "KC3", "KC4", "KC5", "KC6", "KC7", "KC8", "KC9", "KC0", "Minus", "Equal", "Backspace", "Delete"],
         ["Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "LeftBracket", "RightBracket", "Backslash"],
         ["CapsLock", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Semicolon", "Quote", "Return"],
-        ["LShift", "Z", "X", "C", "V", "B", "N", "M", "Comma", "Dot", "Slash", "RightShift", "ArrowUp"],
-        # Recht neben LShift muss noch eine Taste leer, Links neben ArrowUp muss noch der Layerchange rein
+        ["LShift", "__", "Z", "X", "C", "V", "B", "N", "M", "Comma", "Dot", "Slash", "RightShift", "ArrowUp", "__"],
         ["LCTRL", "LGUI", "LAlt", "Space", "RAlt", "RCTRL", "LEFT", "Down", "Right"]
     ],
 
