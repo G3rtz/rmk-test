@@ -17,16 +17,16 @@ output_pins = ["P1_00", "P0_03", "P0_01", "P0_02", "P0_04"]
 # row2col = true
 
 [layout]
-rows = 15
-cols = 5
+rows = 5
+cols = 15
 layers = 1
 keymap = [
     [
         ["ESC", "KC1", "KC2", "KC3", "KC4", "KC5", "KC6", "KC7", "KC8", "KC9", "KC0", "Minus", "Equal", "Backspace", "Delete"],
-        ["Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "LeftBracket", "RightBracket", "Backslash"],
-        ["CapsLock", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Semicolon", "Quote", "Return"],
+        ["Tab", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "LeftBracket", "RightBracket", "Backslash", "__"],
+        ["CapsLock", "A", "S", "D", "F", "G", "H", "J", "K", "L", "Semicolon", "Quote", "__", "Return", "__"],
         ["LShift", "__", "Z", "X", "C", "V", "B", "N", "M", "Comma", "Dot", "Slash", "RightShift", "ArrowUp", "__"],
-        ["LCTRL", "LGUI", "LAlt", "Space", "RAlt", "RCTRL", "LEFT", "Down", "Right"]
+        ["LCTRL", "LGUI", "LAlt", "__", "__", "__", "Space", "__", "__", "__", "RAlt", "RCTRL", "LEFT", "Down", "Right"]
     ],
 
 ]
